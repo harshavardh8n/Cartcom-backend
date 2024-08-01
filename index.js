@@ -9,7 +9,7 @@ const app = express();
 // lets tackle cors
 
 const corsoptions={
-    origin:"http://localhost:3000",
+    origin:"https://cart-com-frontend.vercel.app",
     methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
     credentials:true,
 };
@@ -26,6 +26,10 @@ app.use(prouter);
 
 app.get("/", (req,res)=>{
     res.send("Working");
+})
+
+app.get("/product", (req,res)=>{
+    res.send("products searching");
 })
 
 const port =4000;
