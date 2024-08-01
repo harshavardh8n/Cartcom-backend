@@ -24,7 +24,9 @@ app.use(crouter);
 app.use(prouter);
 // router.route()
 
-
+app.get("/", (req,res)=>{
+    res.send("Working");
+})
 
 const port =4000;
 dbconnect().then(()=>{
