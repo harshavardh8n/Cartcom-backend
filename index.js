@@ -2,7 +2,7 @@ const express = require("express")
 const cors = require("cors");
 // const router = require("./router/auth-router")
 // const crouter = require("./router/contact-router")
-const dbconnect =require("./utils/db");
+// const dbconnect =require("./utils/db");
 // const prouter = require("./router/product-router");
 const app = express();
 
