@@ -29,8 +29,8 @@ app.get("/", (req,res)=>{
 })
 
 const PORT =process.env.PORT || 4000;
-dbconnect().then(()=>{
+// dbconnect().then(()=>{
     app.listen(PORT,()=>{
         console.log("server running on",PORT);
     })
-})
+// })
