@@ -8,13 +8,7 @@ const app = express();
 
 // lets tackle cors
 
-const corsoptions={
-    origin:"https://cart-com-frontend.vercel.app",
-    methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
-    credentials:true,
-};
-
-app.use(cors(corsoptions));
+app.use(cors());
 
 
 app.use(express.json())
@@ -32,9 +26,9 @@ app.get("/product", (req,res)=>{
     res.send("products searching");
 })
 
-const port =4000;
+const PORT =process.env.PORT || 4000;
 dbconnect().then(()=>{
-    app.listen(port,()=>{
-        console.log("server running on",port);
+    app.listen(PORT,()=>{
+        console.log("server running on",PORT);
     })
 })
