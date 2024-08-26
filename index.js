@@ -19,7 +19,7 @@ app.get("/product", (req,res)=>{
 })
 
 
-app.use("/api/auth",router);
+app.use(router);
 app.use(crouter);
 app.use(prouter);
 // router.route()
