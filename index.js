@@ -13,6 +13,12 @@ app.use(cors());
 
 app.use(express.json())
 
+
+app.get("/product", (req,res)=>{
+    res.send("products searching");
+})
+
+
 app.use("/api/auth",router);
 app.use(crouter);
 app.use(prouter);
@@ -20,10 +26,6 @@ app.use(prouter);
 
 app.get("/", (req,res)=>{
     res.send("Working");
-})
-
-app.get("/product", (req,res)=>{
-    res.send("products searching");
 })
 
 const PORT =process.env.PORT || 4000;
